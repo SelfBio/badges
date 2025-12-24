@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Badges | SelfBio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="All current badges on SelfBio and their meaning.">
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+
+  <style>
+    .badges-section {
+      max-width: 1000px;
+      margin: 140px auto;
+      padding: 0 24px;
+    }
+
+    .badges-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 50px;
+    }
+
+    .badges-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 26px;
+    }
+
+    .badge-card {
+      position: relative;
+      background: rgba(255,255,255,0.04);
+      border-radius: 22px;
+      padding: 26px 24px;
+      border: 1px solid rgba(124,58,237,0.25);
+      box-shadow: 0 0 30px rgba(124,58,237,0.12);
+      text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .badge-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 40px rgba(124,58,237,0.25);
+    }
+
+    .badge-card img {
+      width: 46px;
+      height: 46px;
+      object-fit: contain;
+      margin-bottom: 14px;
+      filter: drop-shadow(0 0 6px rgba(124,58,237,0.8));
+    }
+
+    .badge-name {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .badge-desc {
+      font-size: 14px;
+      opacity: 0.8;
+      line-height: 1.6;
+    }
+
+    .badge-card::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(20,10,30,0.95);
+      border: 1px solid rgba(124,58,237,0.4);
+      box-shadow: 0 0 18px rgba(124,58,237,0.25);
+      color: #fff;
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease, bottom 0.2s ease;
+    }
+
+    .badge-card:hover::after {
+      opacity: 1;
+      bottom: -26px;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">SelfBio</div>
+  <ul>
+    <li><a href="https://selfbio.github.io">Home</a></li>
+  </ul>
+</nav>
+
+<section class="badges-section">
+  <h1 class="badges-title">All Badges (Current)</h1>
+  <div class="badges-grid">
+
+    <!-- VERIFIED -->
+    <div class="badge-card" data-tooltip="Verified Badge (ID 1)">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified Badge">
+      <div class="badge-name">Verified</div>
+      <div class="badge-desc">
+        Verified user badge.<br>
+        This badge can be purchased for €5 or you can apply for it on Discord if you are famous.
+      </div>
+    </div>
+
+    <!-- OWNER -->
+    <div class="badge-card" data-tooltip="Owner Badge (ID 2)">
+      <img src="/users/Assets/owner.png" alt="Owner Badge">
+      <div class="badge-name">Owner</div>
+      <div class="badge-desc">
+        The owner of SelfBio.<br>
+        This badge is not obtainable.
+      </div>
+    </div>
+
+    <!-- STAFF -->
+    <div class="badge-card" data-tooltip="Staff Badge (ID 3)">
+      <img src="/users/Assets/admin.png" alt="Staff Badge">
+      <div class="badge-name">Staff</div>
+      <div class="badge-desc">
+        Official staff member of SelfBio.<br>
+        Granted manually.
+      </div>
+    </div>
+
+    <!-- MODERATOR -->
+    <div class="badge-card" data-tooltip="Moderator/Admin Badge (ID 4)">
+      <img src="/users/Assets/moderator.png" alt="Moderator Badge">
+      <div class="badge-name">Moderator</div>
+      <div class="badge-desc">
+        Moderates the SelfBio community.<br>
+        Helps keep the Discord safe and organized.
+      </div>
+    </div>
+
+    <!-- DEVELOPER -->
+    <div class="badge-card" data-tooltip="Developer Badge (ID 5)">
+      <img src="/users/Assets/developer.png" alt="Developer Badge">
+      <div class="badge-name">Developer</div>
+      <div class="badge-desc">
+        Developer working for SelfBio.<br>
+        Includes technical and system development.
+      </div>
+    </div>
+
+    <!-- CONTENT CREATOR -->
+    <div class="badge-card" data-tooltip="Content Creator Badge (ID 6)">
+      <img src="/users/Assets/cc.png" alt="Content Creator Badge">
+      <div class="badge-name">Content Creator</div>
+      <div class="badge-desc">
+        Granted to users with at least <br>
+        1,000 subscribers on YouTube.
+      </div>
+    </div>
+
+    <!-- VIP -->
+    <div class="badge-card" data-tooltip="VIP Badge (ID 7)">
+      <img src="/users/Assets/vip.png" alt="VIP Badge">
+      <div class="badge-name">VIP</div>
+      <div class="badge-desc">
+        Awarded to users who left a positive review<br>
+        and were fully satisfied with their purchase.
+      </div>
+    </div>
+
+    <!-- BUYER -->
+    <div class="badge-card" data-tooltip="Buyer Badge (ID 8)">
+      <img src="/users/Assets/buyer.png" alt="Buyer Badge">
+      <div class="badge-name">Buyer</div>
+      <div class="badge-desc">
+        Purchased a service from SelfBio.<br>
+        Example: Discord setup or username.
+      </div>
+    </div>
+
+    <!-- FRIEND -->
+    <div class="badge-card" data-tooltip="Friend Badge (ID 9)">
+      <img src="/users/Assets/friend.png" alt="Friend Badge">
+      <div class="badge-name">Friend</div>
+      <div class="badge-desc">
+        Close friend of the owner.<br>
+        Personal and trusted connection.
+      </div>
+    </div>
+
+    <!-- RARE USERNAME -->
+    <div class="badge-card" data-tooltip="Rare username (ID 10)">
+      <img src="/users/Assets/rare.png" alt="Rare Username Badge">
+      <div class="badge-name">Rare Username</div>
+      <div class="badge-desc">
+        Owns a rare username.<br>
+        Examples: <b>@lol</b> or single-letter names.
+      </div>
+    </div>
+
+    <!-- ACTIVE -->
+    <div class="badge-card" data-tooltip="Active Badge (ID 11)">
+      <img src="/users/Assets/active.png" alt="Active Badge">
+      <div class="badge-name">Active</div>
+      <div class="badge-desc">
+        Awarded to users who are active<br>
+        on Discord over a period of time.
+      </div>
+    </div>
+
+    <!-- WINNER -->
+    <div class="badge-card" data-tooltip="Event Winner Badge (ID 12)">
+      <img src="/users/Assets/winner.png" alt="Winner Badge">
+      <div class="badge-name">Winner</div>
+      <div class="badge-desc">
+        Won an official giveaway or event<br>
+        hosted by SelfBio.
+      </div>
+    </div>
+
+    <!-- EARLY SUPPORTER -->
+    <div class="badge-card" data-tooltip="Early Supporter (ID 13)">
+      <img src="/users/Assets/early.png" alt="Early Supporter Badge">
+      <div class="badge-name">Early Supporter</div>
+      <div class="badge-desc">
+        Joined SelfBio at a very early stage<br>
+        and supported the project from the beginning.
+      </div>
+    </div>
+
+    <!-- WINTER 2025 -->
+    <div class="badge-card" data-tooltip="Winter 2025 (OG) Badge (ID 14)">
+      <img src="/users/Assets/winter2025.png" alt="Winter 2025 Badge">
+      <div class="badge-name">Winter 2025</div>
+      <div class="badge-desc">
+        Joined during December 2025 at launch.<br>
+        No longer obtainable after January 1, 2026.
+      </div>
+    </div>
+
+    <!-- BUG HUNTER -->
+    <div class="badge-card" data-tooltip="Bug Hunter Badge (ID 15)">
+      <img src="/users/Assets/bughunter.png" alt="Bug Hunter Badge">
+      <div class="badge-name">Bug Hunter</div>
+      <div class="badge-desc">
+        Earned by reporting bugs on the website<br>
+        through the official Discord server.
+      </div>
+    </div>
+
+    <!-- NITRO -->
+    <div class="badge-card" data-tooltip="Discord Nitro Badge (ID 16)">
+      <img src="/users/Assets/nitro.png" alt="Nitro Badge">
+      <div class="badge-name">Nitro</div>
+      <div class="badge-desc">
+        Discord Nitro supporter badge.<br>
+        Not obtainable through SelfBio.
+      </div>
+    </div>
+
+    <!-- COMMUNITY -->
+    <div class="badge-card" data-tooltip="Community Server Badge (ID 17)">
+      <img src="/users/Assets/community.png" alt="Community Badge">
+      <div class="badge-name">Community</div>
+      <div class="badge-desc">
+        Discord Community badge.<br>
+        Not obtainable through SelfBio.
+      </div>
+    </div>
+
+    <!-- BANNED -->
+    <div class="badge-card" data-tooltip="Banned Badge (ID 18)">
+      <img src="/users/Assets/banned.png" alt="Banned Badge">
+      <div class="badge-name">Banned</div>
+      <div class="badge-desc">
+        If a user has this badge, that user most likely <br>
+        has no social media links, profile picture, etc., because that user has violated some rule.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2025 SelfBio · <a href="https://selfbio.github.io">back home</a>
+</footer>
+
+</body>
+</html>
