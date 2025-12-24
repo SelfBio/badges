@@ -1,3 +1,4 @@
+/* Body */
 body {
   margin: 0;
   background: #07010d;
@@ -5,36 +6,44 @@ body {
   color: #fff;
 }
 
-nav {
+/* Navbar */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px 32px;
-  background: rgba(20,20,30,0.8);
-  backdrop-filter: blur(10px);
+  background: rgba(20,20,30,0.85);
+  backdrop-filter: blur(12px);
 }
 
-nav .logo {
-  font-size: 24px;
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-left img {
+  height: 40px;
+}
+
+.nav-left span {
+  font-size: 20px;
   font-weight: 700;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li a {
-  color: #fff;
+.nav-right a {
+  margin-left: 24px;
   text-decoration: none;
+  color: #fff;
   font-weight: 600;
+  transition: 0.25s;
 }
 
-nav ul li a:hover {
+.nav-right a:hover {
   color: #7c3aed;
 }
 
+/* Footer */
 footer {
   padding: 40px 20px;
   text-align: center;
