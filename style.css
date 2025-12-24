@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  background: #07010d;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: rgba(20,20,30,0.8);
+  backdrop-filter: blur(10px);
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: #7c3aed;
+}
+
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  color: #666;
+}
