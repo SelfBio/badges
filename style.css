@@ -8,12 +8,20 @@ body {
 
 /* Navbar */
 .navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px 32px;
   background: rgba(20,20,30,0.85);
   backdrop-filter: blur(12px);
+  border-radius: 999px; /* komplett rund */
+  width: min(90%, 900px);
+  box-shadow: 0 0 20px rgba(124,58,237,0.4);
+  z-index: 100;
 }
 
 .nav-left {
@@ -24,11 +32,13 @@ body {
 
 .nav-left img {
   height: 40px;
+  border-radius: 50%; /* rundes Logo */
 }
 
 .nav-left span {
   font-size: 20px;
   font-weight: 700;
+  color: #fff;
 }
 
 .nav-right a {
@@ -41,6 +51,7 @@ body {
 
 .nav-right a:hover {
   color: #7c3aed;
+  transform: translateY(-1px);
 }
 
 /* Footer */
